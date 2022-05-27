@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Juan Sebastian Montes Aguirre">
+    <meta name="description" content="Ejercicios JSX">
+    <title></title>
+  </head>
+  <body>
+    <div id="root">
+      <!--Render code React-js-->
+    </div>
+
+    <!-- Cargar React. -->
+    <!-- Nota: cuando se despliegue, reemplazar "development.js" con "production.min.js". -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <!-- Cargamos nuestro componente de React. -->
+    <script type="text/babel">
+// nota cada codigo que veas documentado de aca para abajo
+// seran diferentes formas de realizarlo con jsx los coloco para
+// que podamos probar y mirar diferentes formas de como podriamos realizarlos
+// los 12 ejercicios
+
+// Ejercicio 1
+const data = {
+            title_1: "Plato de la semana",
+            title_2: "Berenjenas fritas",
+            paragraph_1: "Comensales: 4 personas",
+            paragraph_2: "Tiempo de preparación: 10 minutos",
+            paragraph_3: "Tiempo de cocción: 12 minutos",
+            title_3: "Ingredientes:",
+            line_1: "4 Berenjenas.",
+            line_2: "Sal.",
+            line_3: "Pimienta.",
+            line_4: "4 cuhcaradas de harina y aceite.",
+            title_4: "Preparación",
+            line_5: "Lavar las berenjenas,",
+            line_6: "Cortarlas en rodajas.",
+            line_7: "Espolvorearlas con sal.",
+            line_8: "Dejar que suelten el agua durante 30 minutos.",
+            line_9: "Enharinarlas, ponerlas a freir durante 5 minutos en aceite bien caliente.",
+
+
+         } 
+
+
+const element = (
+        <div>
+            <h1>{data.title_1}</h1>
+            <h2>{data.title_2}</h2>
+            <p>{data.paragraph_1}</p>
+            <p>{data.paragraph_2}</p>
+            <p>{data.paragraph_3}</p>
+            <h3>{data.title_3}</h3>
+            <p>{data.line_1}<br/>
+            {data.line_2} <br/>
+            {data.line_3}<br/>
+            {data.line_4}</p>
+            <h3>{data.title_4}</h3>
+            <p>{data.line_5}<br/>
+            {data.line_6}<br/>
+            {data.line_7}<br/>
+            {data.line_8}</p>
+
+         </div>
+        );
+
+
+        // Renderiamos o pintamos
+        ReactDOM.render(
+            element,// estructura jsx para pintar
+            document.getElementById('root')// elemento donde se pintara
+        );
+    </script>
+  </body>
+</html>
