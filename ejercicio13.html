@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Juan Sebastian Montes Aguirre">
+    <meta name="description" content="Ejercicios JSX">
+    <title></title>
+  </head>
+  <body>
+    <div id="root">
+      <!--Render code React-js-->
+    </div>
+
+    <!-- Cargar React. -->
+    <!-- Nota: cuando se despliegue, reemplazar "development.js" con "production.min.js". -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <!-- Cargamos nuestro componente de React. -->
+    <script type="text/babel">
+// nota cada codigo que veas documentado de aca para abajo
+// seran diferentes formas de realizarlo con jsx los coloco para
+// que podamos probar y mirar diferentes formas de como podriamos realizarlos
+// los 12 ejercicios
+
+// Ejercicio 13
+
+const t1=<h1>Titulo de encabezado</h1>
+    const p1=<p>Este es un parrafo</p>
+    const video=<iframe width="560" height="315" src="https://www.youtube.com/watch?v=Z8zAKYLZBqc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    const p2=<p>Derechos Reservados(pie)</p>
+
+const element=(
+    <div>
+        {t1}
+        {p1}
+        {video}
+        {p2}
+        </div>
+)
+
+    ReactDOM.render(element,document.getElementById("root"))
+    </script>
+
+</body>
+</html>

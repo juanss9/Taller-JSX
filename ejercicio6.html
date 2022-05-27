@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Juan Sebastian Montes Aguirre">
+    <meta name="description" content="Ejercicios JSX">
+    <title></title>
+  </head>
+  <body>
+    <div id="root">
+      <!--Render code React-js-->
+    </div>
+
+    <!-- Cargar React. -->
+    <!-- Nota: cuando se despliegue, reemplazar "development.js" con "production.min.js". -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <!-- Cargamos nuestro componente de React. -->
+    <script type="text/babel">
+// nota cada codigo que veas documentado de aca para abajo
+// seran diferentes formas de realizarlo con jsx los coloco para
+// que podamos probar y mirar diferentes formas de como podriamos realizarlos
+// los 12 ejercicios
+
+// Ejercicio 6
+const data = {
+            title_1: "Next University",
+            title_2: "Programas de Tecnología",
+            title_3: "Desarrollador Web",
+            title_4: "Android",
+            title_5: "Programa de Negocio",
+            title_6: "Mercadeo Digital",
+
+        }
+
+        const element = (
+            <div>
+                <h1>El Noticiero {data.title_1}</h1>
+                <h2>{data.title_2}</h2>
+                <h3>{data.title_3}</h3>
+                <p><b>{data.title_1}</b> lanza su programa de formación <b>"{data.title_3}"</b> con la facilidad de cpacitar a personas en las tendencias actuales
+                    sobre tecnologias, en caso de desarrollo web, se basa temas relacionados con implementacion de Front-End con tecnologias y Frameworks, tales
+                    como: <i>HTML, CSS, JavaScript, Bootstrap, entre otros.</i></p>
+                <h3>{data.title_4}</h3>
+                <p>En <b>{data.line_1}</b> te ofrecemos el programa <b>{data.title_4}</b> que te da las herramientas necesarias para diseñar e implementar
+                    aplicaciones {data.title_4} para dispositivos móviles, partiendo de un conocimiento basico de <i>Java</i>, utilizando el entorno de desarrollo de
+                    <i>{data.title_4} Studio</i>. Aprenderás los aspectos fundamentales para crear aplicaiones {data.title_4} interactivas, dinámicas y exitosas
+                    utilizando técnicas para el manejo de los recursos, datros, segundos planos, localizacion, sensores, animaciones, gráficos, multimedia y monetización.</p>
+                <h2>{data.title_5}</h2>
+                <h3>{data.title_6}</h3>
+                <p><b><i>{data.title_1}</i></b> coloca a tu disposición el programa de <b>"{data.title_6}"</b>. Sabias que...{data.title_6} o Digital Marketing
+                    es mucho mas que hacer y publicar anuncios. Se trata del consumidor y la estrategia de negocio.
+                    Estos son los puntos de partida para que cualquier acción de {data.title_6} <i>sea exitosa y optimice la inversión.</i>
+                    Este certificado, es un programa completo y práctico que permite entender al consumidor, la industria, la competencia y los retos del negocio propio;
+                    para crear e implementar estrategias a la medida, en diferentes plataformas y medios digitales. Por supuesto, monitoreando los resultados para tomar
+                    decisiones en tiempo real.</p>
+            </div>
+        );
+
+
+        // Renderiamos o pintamos
+        ReactDOM.render(
+            element,// estructura jsx para pintar
+            document.getElementById('root')// elemento donde se pintara
+        );
+    </script>
+</body>
+
+</html>

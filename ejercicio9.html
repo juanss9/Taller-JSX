@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Juan Sebastian Montes Aguirre">
+    <meta name="description" content="Ejercicios JSX">
+    <title></title>
+  </head>
+  <body>
+    <div id="root">
+      <!--Render code React-js-->
+    </div>
+
+    <!-- Cargar React. -->
+    <!-- Nota: cuando se despliegue, reemplazar "development.js" con "production.min.js". -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <!-- Cargamos nuestro componente de React. -->
+    <script type="text/babel">
+// nota cada codigo que veas documentado de aca para abajo
+// seran diferentes formas de realizarlo con jsx los coloco para
+// que podamos probar y mirar diferentes formas de como podriamos realizarlos
+// los 12 ejercicios
+
+// Ejercicio 9
+const data = {
+            title_1: "Cartelera de vuelos - Aeropuerto el mirador",
+            title_2: "Llegadas",
+            title_3: "Salidas",
+            paragraph_1: "Aerolinea",
+            paragraph_2: "Nro. vuelo",
+            paragraph_3: "Estatus",
+            paragraph_4: "Hora estimada",
+            paragraph_5: "Puerta",
+            paragraph_6: "AIRLAN",
+            paragraph_7: "355",
+            paragraph_8: "Aterrizo",
+            paragraph_9: "Embarcando",
+            paragraph_10: "3",
+            paragraph_11: "1",
+            paragraph_12: "2:45pm",
+            paragraph_13: "2:15pm",
+
+        }
+        const tituloavion = <h1>{data.title_1}</h1>;
+        const subtituloavion1 = <h2>{data.title_2}</h2>;
+        const subtituloavion2 = <h2>{data.title_3}</h2>;
+        const parrafoavion = <p>{data.paragraph_1}</p>;
+        const parrafoavion2 = <p>{data.paragraph_2}</p>;
+        const parrafoavion3 = <p>{data.paragraph_3}</p>;
+        const parrafoavion4 = <p>{data.paragraph_4}</p>;
+        const parrafoavion5 = <p>{data.paragraph_5}</p>;
+        const parrafoavion6 = <p>{data.paragraph_6}</p>;
+        const parrafoavion7 = <p>{data.paragraph_7}</p>;
+        const parrafoavion8 = <p>{data.paragraph_8}</p>;
+        const parrafoavion9 = <p>{data.paragraph_9}</p>;
+        const parrafoavion10 = <p>{data.paragraph_10}</p>;
+        const parrafoavion11 = <p>{data.paragraph_11}</p>;
+        const parrafoavion12 = <p>{data.paragraph_12}</p>;
+        const parrafoavion13 = <p>{data.paragraph_13}</p>;
+
+
+        const element = (
+            <div>
+                {tituloavion}
+                {subtituloavion1}
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>{parrafoavion}</th>
+                            <th>{parrafoavion2}</th>
+                            <th>{parrafoavion3}</th>
+                            <th>{parrafoavion4}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{parrafoavion6}</td>
+                            <td>{parrafoavion7}</td>
+                            <td>{parrafoavion8}</td>
+                            <td>{parrafoavion12}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                {subtituloavion2}
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>{parrafoavion}</th>
+                            <th>{parrafoavion2}</th>
+                            <th>{parrafoavion3}</th>
+                            <th>{parrafoavion4}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{parrafoavion6}</td>
+                            <td>{parrafoavion7}</td>
+                            <td>{parrafoavion9}</td>
+                            <td>{parrafoavion13}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        );
+
+        // Renderiamos o pintamos
+        ReactDOM.render(
+            element,// estructura jsx para pintar
+            document.getElementById('root')// elemento donde se pintara
+        );
+    </script>
+</body>
+
+</html>

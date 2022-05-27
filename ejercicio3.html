@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Juan Sebastian Montes Aguirre">
+    <meta name="description" content="Ejercicios JSX">
+    <title></title>
+  </head>
+  <body>
+    <div id="root">
+      <!--Render code React-js-->
+    </div>
+
+    <!-- Cargar React. -->
+    <!-- Nota: cuando se despliegue, reemplazar "development.js" con "production.min.js". -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <!-- Cargamos nuestro componente de React. -->
+    <script type="text/babel">
+// nota cada codigo que veas documentado de aca para abajo
+// seran diferentes formas de realizarlo con jsx los coloco para
+// que podamos probar y mirar diferentes formas de como podriamos realizarlos
+// los 12 ejercicios
+
+// Ejercicio 3
+const data = {
+            title_1: "Página inicial de Juan Tuesta",
+            title_2: "Enlaces favoritos:",
+            paragraph_1: "Bienvenido a mi página personal. Soy un alumno de la Universidad de Deusto y esta es mi página inicial, con la lista de mis enlaces favoritos y otra información de interés",
+            paragraph_2: "Internet",
+            paragraph_3: "Google",
+            paragraph_4: "Aldea global",
+            paragraph_5: "Manual de HTML",
+            paragraph_6: "Juan Tuesta, Universidad de Deusto, marzo 2002.",
+        }
+        const titulox = <h1>{data.title_1}</h1>;
+        const subtitulox = <h2>{data.title_2}</h2>;
+        const parrafox = <p>{data.paragraph_1}</p>;
+        const parrafo2x = <p>{data.paragraph_2}</p>;
+        const parrafo3x = <p>{data.paragraph_3}</p>;
+        const parrafo4x = <p>{data.paragraph_4}</p>;
+        const parrafo5x = <p>{data.paragraph_5}</p>;
+        const parrafo6x = <p class="p1">{data.paragraph_6}</p>;
+
+        const element = (
+            <div>
+                {titulox}
+                {parrafox}
+                {subtitulox}
+                <ol>
+                    <li>{parrafo2x}</li>
+                    <li><a href="taller8.html">{parrafo3x}</a></li>
+                    <li>{parrafo4x}</li>
+                    <li><a href="taller8.html">{parrafo5x}</a></li>
+                </ol>
+                {parrafo6x}
+            </div>
+        );
+
+        // Renderiamos o pintamos
+        ReactDOM.render(
+            element,// estructura jsx para pintar
+            document.getElementById('root')// elemento donde se pintara
+        );
+    </script>
+</body>
+
+</html>

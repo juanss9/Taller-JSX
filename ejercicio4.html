@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Juan Sebastian Montes Aguirre">
+    <meta name="description" content="Ejercicios JSX">
+    <title></title>
+  </head>
+  <body>
+    <div id="root">
+      <!--Render code React-js-->
+    </div>
+
+    <!-- Cargar React. -->
+    <!-- Nota: cuando se despliegue, reemplazar "development.js" con "production.min.js". -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <!-- Cargamos nuestro componente de React. -->
+    <script type="text/babel">
+// nota cada codigo que veas documentado de aca para abajo
+// seran diferentes formas de realizarlo con jsx los coloco para
+// que podamos probar y mirar diferentes formas de como podriamos realizarlos
+// los 12 ejercicios
+
+// Ejercicio 4
+const data = {
+            title_1: "Página inicial de Juan Tuesta",
+            title_2: "Enlaces favoritos:",
+            paragraph_1: "Bienvenido a mi página personal. Soy un alumno de la Universidad de Deusto y esta es mi página inicial, con la lista de mis enlaces favoritos y otra información de interés",
+            paragraph_2: "Páginas personales",
+            paragraph_3: "Páginas de referencia",
+            paragraph_4: "Portales",
+            paragraph_5: "Medios de comunicación",
+            paragraph_6: "Charkes F.Golfarb",
+            paragraph_7: "Lou Burnard",
+            paragraph_8: "Tim Berners-Lee",
+            paragraph_9: "Juan Tuesta, Universidad de Deusto, marzo 2002.",
+        }
+        const titulox1 = <h1>{data.title_1}</h1>;
+        const subtitulox1 = <h2>{data.title_2}</h2>;
+        const parrafox1 = <p>{data.paragraph_1}</p>;
+        const parrafox2 = <p>{data.paragraph_2}</p>;
+        const parrafox3 = <p>{data.paragraph_3}</p>;
+        const parrafox4 = <p>{data.paragraph_4}</p>;
+        const parrafox5 = <p>{data.paragraph_5}</p>;
+        const parrafox6 = <p>{data.paragraph_6}</p>;
+        const parrafox7 = <p>{data.paragraph_7}</p>;
+        const parrafox8 = <p>{data.paragraph_8}</p>;
+        const parrafox9 = <p class="p1">{data.paragraph_9}</p>;
+
+        const element = (
+            <div>
+                {titulox1}
+                {parrafox1}
+                {subtitulox1}
+                <ol>
+                    <li>{parrafox2}</li>
+                    <ul>
+                        <li>{parrafox6}</li>
+                        <li>{parrafox7}</li>
+                        <li>{parrafox8}</li>
+                    </ul>
+                    <li>{parrafox3}</li>
+                    <li>{parrafox4}</li>
+                    <li>{parrafox5}</li>
+                </ol>
+                {parrafox9}
+            </div>
+        );
+
+        // Renderiamos o pintamos
+        ReactDOM.render(
+            element,// estructura jsx para pintar
+            document.getElementById('root')// elemento donde se pintara
+        );
+    </script>
+</body>
+
+</html>

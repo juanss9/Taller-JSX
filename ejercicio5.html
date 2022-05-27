@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Juan Sebastian Montes Aguirre">
+    <meta name="description" content="Ejercicios JSX">
+    <title></title>
+  </head>
+  <body>
+    <div id="root">
+      <!--Render code React-js-->
+    </div>
+
+    <!-- Cargar React. -->
+    <!-- Nota: cuando se despliegue, reemplazar "development.js" con "production.min.js". -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <!-- Cargamos nuestro componente de React. -->
+    <script type="text/babel">
+// nota cada codigo que veas documentado de aca para abajo
+// seran diferentes formas de realizarlo con jsx los coloco para
+// que podamos probar y mirar diferentes formas de como podriamos realizarlos
+// los 12 ejercicios
+
+// Ejercicio 5
+const data = {
+            title_1: "Página inicial de Juan Tuesta",
+            title_2: "Enlaces favoritos",
+            title_3: "Páginas personales",
+            title_4: "Páginas de referencia",
+            title_5: "Portales",
+            title_6: "Publicaciones",
+            paragraph_1: "Bienvenido a mi página personal. Soy un alumno de la Universidad de Deusto y esta es mi página inicial, con la lista de mis enlaces favoritos y otra información de interés",
+            paragraph_2: "Juan Tuesta, Universidad de Deusto, marzo 2002.",
+            paragraph_3: "Páginas personales",
+            paragraph_4: "Páginas de referencia",
+            paragraph_5: "Portales",
+            paragraph_6: "Publicaciones",
+            paragraph_7: "Documentalistas",
+            paragraph_8: "Historiadores",
+            paragraph_9: "Lingüistas",
+            paragraph_10: "Traductores",
+            paragraph_11: "Bibliotecas universitarias",
+            paragraph_12: "Centros de documentación",
+            paragraph_13: "Museos de arte contemporáneo",
+            paragraph_14: "Medios de comunicación",
+            paragraph_15: "Inicia",
+            paragraph_16: "Telépolis",
+            paragraph_17: "Ciudades",
+            paragraph_18: "Terra",
+            paragraph_19: "Ciberp@ís",
+            paragraph_20: "Diario Tecnologías de la Información",
+            paragraph_21: "The Standard",
+            paragraph_22: "Infoworld",
+            paragraph_23: "Wired",
+            paragraph_24: "Charkes F.Golfarb",
+            paragraph_25: "Lou Burnard",
+            paragraph_26: "Tim Berners-Lee",
+        }
+        const titulo1 = <h1>{data.title_1}</h1>;
+        const subtitulo1 = <h2>{data.title_2}</h2>;
+        const subtitulo2 = <h2>{data.title_3}</h2>;
+        const subtitulo3 = <h2>{data.title_4}</h2>;
+        const subtitulo4 = <h2>{data.title_5}</h2>;
+        const subtitulo5 = <h2>{data.title_6}</h2>;
+        const parrafo1 = <p>{data.paragraph_1}</p>;
+        const parrafo2 = <p class="p1">{data.paragraph_2}</p>;
+        const parrafo3 = <p>{data.paragraph_3}</p>;
+        const parrafo4 = <p>{data.paragraph_4}</p>;
+        const parrafo5 = <p>{data.paragraph_5}</p>;
+        const parrafo6 = <p>{data.paragraph_6}</p>;
+        const parrafo7 = <p>{data.paragraph_7}</p>;
+        const parrafo8 = <p>{data.paragraph_8}</p>;
+        const parrafo9 = <p>{data.paragraph_9}</p>;
+        const parrafo10 = <p>{data.paragraph_10}</p>;
+        const parrafo11 = <p>{data.paragraph_11}</p>;
+        const parrafo12 = <p>{data.paragraph_12}</p>;
+        const parrafo13 = <p>{data.paragraph_13}</p>;
+        const parrafo14 = <p>{data.paragraph_14}</p>;
+        const parrafo15 = <p>{data.paragraph_15}</p>;
+        const parrafo16 = <p>{data.paragraph_16}</p>;
+        const parrafo17 = <p>{data.paragraph_17}</p>;
+        const parrafo18 = <p>{data.paragraph_18}</p>;
+        const parrafo19 = <p>{data.paragraph_19}</p>;
+        const parrafo20 = <p>{data.paragraph_20}</p>;
+        const parrafo21 = <p>{data.paragraph_21}</p>;
+        const parrafo22 = <p>{data.paragraph_22}</p>;
+        const parrafo23 = <p>{data.paragraph_23}</p>;
+        const parrafo24 = <p>{data.paragraph_24}</p>;
+        const parrafo25 = <p>{data.paragraph_25}</p>;
+        const parrafo26 = <p>{data.paragraph_26}</p>;
+
+        const element = (
+            <div>
+                {titulo1}
+                {parrafo1}
+                {subtitulo1}
+                <ol>
+                    <li><a href="ejercicio5.html">{parrafo3}</a></li>
+                    <li>{parrafo4}</li>
+                    <li>{parrafo5}</li>
+                    <li>{parrafo6}</li>
+                </ol>
+                <hr></hr>
+
+                {subtitulo2}
+                <ol>
+                    <li>{parrafo7}</li>
+                    <ul>
+                        <li>{parrafo24}</li>
+                        <li>{parrafo25}</li>
+                        <li>{parrafo26}</li>
+                    </ul>
+                    <li>{parrafo8}</li>
+                    <li>{parrafo9}</li>
+                    <li>{parrafo10}</li>
+                </ol>
+                <hr></hr>
+
+                {subtitulo3}
+                <ol>
+                    <li>{parrafo11}</li>
+                    <li>{parrafo12}</li>
+                    <li>{parrafo13}</li>
+                    <li>{parrafo14}</li>
+                </ol>
+                <hr></hr>
+
+                {subtitulo4}
+                <ol>
+                    <li>{parrafo15}</li>
+                    <li>{parrafo16}</li>
+                    <li>{parrafo17}</li>
+                    <li>{parrafo18}</li>
+                </ol>
+                <hr></hr>
+
+                {subtitulo5}
+                <ol>
+                    <li>{parrafo19}</li>
+                    <li>{parrafo20}</li>
+                    <li>{parrafo21}</li>
+                    <li>{parrafo22}</li>
+                    <li>{parrafo23}</li>
+                </ol>
+                <hr></hr>
+
+                {parrafo2}
+
+            </div>
+        );
+
+        // Renderiamos o pintamos
+        ReactDOM.render(
+            element,// estructura jsx para pintar
+            document.getElementById('root')// elemento donde se pintara
+        );
+    </script>
+</body>
+
+</html>

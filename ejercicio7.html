@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Juan Sebastian Montes Aguirre">
+    <meta name="description" content="Ejercicios JSX">
+    <title></title>
+  </head>
+  <body>
+    <div id="root">
+      <!--Render code React-js-->
+    </div>
+
+    <!-- Cargar React. -->
+    <!-- Nota: cuando se despliegue, reemplazar "development.js" con "production.min.js". -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <!-- Cargamos nuestro componente de React. -->
+    <script type="text/babel">
+// nota cada codigo que veas documentado de aca para abajo
+// seran diferentes formas de realizarlo con jsx los coloco para
+// que podamos probar y mirar diferentes formas de como podriamos realizarlos
+// los 12 ejercicios
+
+// Ejercicio 7
+const data = {
+            title_1: "Destinos Turísticos",
+            pais_1:
+                <ol>
+                    <li><i>Buenos Aires</i></li>
+                    <li><i>Bariloche</i></li>
+                </ol>,
+            pais_2:
+                <ol>
+                    <li><i>Rio de Janeiro</i></li>
+                    <li><i>Brasilia</i></li>
+                </ol>,
+            pais_3:
+                <ol>
+                    <li><i>Santiago</i></li>
+                    <li><i>Valparaiso</i></li>
+                </ol>,
+            pais_4:
+                <ol>
+                    <li><i>Bogotá</i></li>
+                    <li><i>Cartagena de Indias</i></li>
+                </ol>,
+            pais_5:
+                <ol>
+                    <li><i>New York</i></li>
+                    <li><i>San Francisco</i></li>
+                </ol>,
+            pais_6:
+                <ol>
+                    <li><i>Cancún</i></li>
+                    <li><i>Acapulco</i></li>
+                </ol>,
+            pais_7:
+                <ol>
+                    <li><i>Lima</i></li>
+                    <li><i>Cuzco</i></li>
+                </ol>,
+            pais_8:
+                <ol>
+                    <li><i>Margarita</i></li>
+                    <li><i>Mérida</i></li>
+                </ol>,
+        }
+
+        const element = (
+            <div>
+                <h1>{data.title_1}</h1>
+                <ol>
+                    <li><b>Argentina</b>
+                        {data.pais_1}</li>
+                    <li><b>Brasil</b>
+                        {data.pais_2}</li>
+                    <li><b>Chile</b>
+                        {data.pais_3}</li>
+                    <li><b>Colombia</b>
+                        {data.pais_4}</li>
+                    <li><b>Estados Unidos</b>
+                        {data.pais_5}</li>
+                    <li><b>México</b>
+                        {data.pais_6}</li>
+                    <li><b>Perú</b>
+                        {data.pais_7}</li>
+                    <li><b>Venezuela</b>
+                        {data.pais_8}</li>
+                </ol>
+
+            </div>
+        );
+
+
+        // Renderiamos o pintamos
+        ReactDOM.render(
+            element,// estructura jsx para pintar
+            document.getElementById('root')// elemento donde se pintara
+        );
+    </script>
+</body>
+
+</html>

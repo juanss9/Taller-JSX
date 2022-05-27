@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Juan Sebastian Montes Aguirre">
+    <meta name="description" content="Ejercicios JSX">
+    <title></title>
+  </head>
+  <body>
+    <div id="root">
+      <!--Render code React-js-->
+    </div>
+
+    <!-- Cargar React. -->
+    <!-- Nota: cuando se despliegue, reemplazar "development.js" con "production.min.js". -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <!-- Cargamos nuestro componente de React. -->
+    <script type="text/babel">
+// nota cada codigo que veas documentado de aca para abajo
+// seran diferentes formas de realizarlo con jsx los coloco para
+// que podamos probar y mirar diferentes formas de como podriamos realizarlos
+// los 12 ejercicios
+
+// Ejercicio 11
+const data = {
+
+titulo1: "Registro en nuestra tienda",
+nombre: "Nombre de usuario:",
+email: "Email:",
+edad: "Edad:",
+genero: "Género:",
+recomendado: "Recomendado por:",
+comentarios: "Comentarios:",
+acepto: "Acepto terminos y condiciones:"
+
+}
+
+const element = (
+<div>
+    <h1>{data.titulo1}</h1>
+    <p>{data.nombre}</p>
+    <input type="text" placeholder="Ej: Sebastian" ></input>
+    <br />
+    <p>{data.email}</p>
+    <input type="text" placeholder="Ej: Sebastian@gmail.com" ></input>
+    <br />
+    <p>{data.edad}</p>
+    <input type="text" placeholder="Ej: 21" ></input>
+    <br />
+    <p>{data.genero}</p>
+    <input type="radio" value="Masculino" name="Genero" /> Masculino
+    <br />
+    <input type="radio" value="Femenino" name="Genero" /> Femenino
+    <br />
+    <p>{data.recomendado}</p>
+    <select value={data.recomendado}>
+        <option value="A">Google</option>
+        <option value="B">Amazon</option>
+        <option value="C">Facebook</option>
+    </select>
+    <br />
+    <p>{data.comentarios}</p>
+    <textarea rows={4} cols={50} type="textarea"
+        name="textValue"
+    />
+    <br />
+    <p>{data.acepto}</p>
+    <input type="checkbox" />
+    <br />
+    <input type="submit" value="Registrar" />
+</div>
+);
+
+
+// Renderiamos o pintamos
+ReactDOM.render(
+element,// estructura jsx para pintar
+document.getElementById('root')// elemento donde se pintara
+);
+</script>
+</body>
+
+</html>
